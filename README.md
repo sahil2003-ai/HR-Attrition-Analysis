@@ -38,6 +38,59 @@ TotalWorkingYears – Career experience
 
 Attrition – Whether the employee left the company (Yes/No)
 
+---
+
+## 📊 Dashboard Overview
+
+**Key Metrics:**
+- **Total Employees:** 1,470  
+- **Total Attrition:** 237 (≈16%)  
+- **Active Employees:** 1,233 (≈84%)  
+- **Average Age:** 37 years  
+
+**Highlights from the Dashboard:**
+- **By Performance:** 200 low-performing vs. 37 high-performing employees left.  
+- **By Department:** R&D had the highest attrition (133), followed by Sales (92) and HR (12).  
+- **By Job Role:** Sales Executives (57) and Laboratory Technicians (62) showed significant attrition.  
+- **By Gender:** Male (150) vs Female (87) attrition.  
+- **By Overtime:** 127 employees with overtime left compared to 110 without.  
+- **By Education Field:** R&D field faced the most attrition (133).  
+- **By Experience:** Mid-level employees experienced the highest turnover (115).  
+
+---
+
+## 🧠 Insights
+
+1. **High Attrition in R&D and Sales Departments**  
+   Indicates potential workload imbalance or job dissatisfaction.
+
+2. **Younger and Mid-level Employees**  
+   Are more prone to leave — suggesting lack of career development opportunities.
+
+3. **Performance Correlation**  
+   Low performers dominate attrition, highlighting performance-based turnover.
+
+4. **Work Distance and Overtime Factors**  
+   Higher attrition among employees working nearby and doing overtime — signaling burnout.
+
+---
+
+## 🧮 SQL Analysis
+
+The file [`HR_Attrition_Analysis.sql`](HR_Attrition_Analysis.sql) includes:
+- Total employee count  
+- Attrition rate and percentage by department, job role, education, and overtime  
+- Age group segmentation  
+- Average salary by department  
+- Top 5 job roles with highest attrition rates  
+
+Example query:
+```sql
+-- Attrition rate by department
+SELECT Department,
+       SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS attrition_rate
+FROM HR_Attrition
+GROUP BY Department;
 📊 SQL Analysis
 
 File: HR_Attrition_Analysis.sql
@@ -115,13 +168,6 @@ pip install pandas matplotlib seaborn plotly
 
 Open HR Attrition analysis.xlsx to explore pivot tables & charts.
 
-📌 Future Improvements
-
-Build a predictive machine learning model for attrition risk (e.g., Logistic Regression, Random Forest).
-
-Create an interactive dashboard using Power BI or Tableau.
-
-Incorporate employee satisfaction survey data for deeper insights.
 
 ⚡ Author: Sahil gaikwad
 📅 Date: September 2025
