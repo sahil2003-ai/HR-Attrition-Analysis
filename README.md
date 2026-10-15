@@ -47,10 +47,12 @@ HR teams need transparent workforce metrics to identify groups or patterns that 
 
 ## 📂 Dataset
 
-Files include HR_Attrition_Analysis.csv, HR_Attrition_Analysis.ipynb, HR_Attrition_Analysis.sql, and HR Attrition analysis.xlsx. Verify source and row/column counts from the CSV.
+The saved notebook confirms **1,470 rows × 35 columns** in `HR_Attrition_Analysis.csv`.
 
-- **Privacy and licensing:** Check source terms and avoid publishing personal, sensitive, or restricted data.
-- **Preprocessing:** Follow the actual SQL/notebook/report implementation; do not assume cleaning steps or row counts that have not been verified.
+- **Target:** `Attrition` (Yes/No).
+- **Fields include:** age, department, job role, monthly income, overtime, job satisfaction, total working years, years at company, and other workforce attributes.
+- **Missing values:** The notebook's saved output begins with zero counts; rerun the full check to confirm every column.
+- **Privacy/provenance:** Treat this as employee-level data. Document the source/license and avoid publishing identifiable records.
 
 ## 🛠️ Tech Stack
 
@@ -103,13 +105,19 @@ Run the notebook and SQL queries after setting the data path; open the XLSX work
 
 ## 📊 Results and Insights
 
-### Key Findings
+### Verified dataset details from saved notebook output
 
-The earlier README described 1,470 records and 35 features; verify these counts against the CSV before reporting them. Add only verified insights.
+| Check | Recorded result |
+|---|---:|
+| Rows | 1,470 |
+| Columns | 35 |
+| Target | `Attrition` (Yes/No) |
 
-### Evaluation
+### Analysis implemented in SQL
 
-For analytics projects, reconcile key totals and document metric definitions. For ML projects, report the baseline, split strategy, relevant metrics, and held-out evaluation results. Do not include unverified scores or business impact claims.
+The SQL file calculates total employee count, attrition counts and percentages, attrition by department/job role/education field/overtime/age group, average monthly income by department, and average working years by attrition status.
+
+The SQL file contains query definitions but no saved result values. Attrition percentages and subgroup findings are therefore not asserted here. Run the queries and record both counts and denominators before drawing conclusions.
 
 ## 🖼️ Screenshots
 
@@ -123,9 +131,10 @@ No image files were confirmed for this repository during this update. If you hav
 
 ## ⚠️ Limitations
 
-- Attrition patterns do not establish why an employee left.
-- Protect employee privacy and avoid causal claims from correlations.
-- No screenshot files were found in the repository.
+- Dataset dimensions are from saved notebook output; rerun to confirm the current CSV.
+- Aggregate attrition metrics were not independently computed during this review.
+- Attrition patterns do not prove why employees leave.
+- Protect employee-level data and avoid decisions about individuals based only on group correlations.
 
 ## 🚀 Future Improvements
 
