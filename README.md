@@ -1,38 +1,29 @@
 # HR Attrition Analysis
 
-An HR analytics project exploring employee attrition patterns and potential relationships with department, role, overtime, compensation, tenure, and job-satisfaction indicators.
+An HR analytics project using Excel, SQL, and Python to explore employee attrition patterns and workforce indicators.
 
-## Project Objective
-Use Excel, SQL, and Python-based analysis to summarize employee attrition and help stakeholders formulate evidence-based questions about retention.
+## Step-by-step workflow
 
-## Dataset
-The existing project documentation describes 1,470 employee records and 35 features. Verify the file and source before reusing these figures in external reporting. The documented fields include department, job role, monthly income, total working years, overtime, job satisfaction, and attrition status.
-
-## Analysis Workflow
-1. Inspect data types, missing values, duplicates, and category consistency.
-2. Define the attrition rate and its denominator.
-3. Compare attrition across relevant employee groups.
-4. Use SQL for grouped summaries and Python for EDA.
-5. Present results in an Excel dashboard and explain potential implications.
+1. Inspect `HR_Attrition_Analysis.csv` and review its columns, data types, missing values, and duplicate records.
+2. Open `HR_Attrition_Analysis.ipynb` and run the notebook from the top after confirming the dataset path.
+3. Define attrition rate and denominator explicitly; compare the result with the dataset.
+4. Use SQL in `HR_Attrition_Analysis.sql` to summarize attrition across available groups such as department, role, overtime, and satisfaction.
+5. Use Python for EDA and check whether patterns are stable across group sizes.
+6. Open `HR Attrition analysis.xlsx` and review pivot tables, charts, filters, and KPI calculations.
+7. Compare important totals across CSV, SQL, notebook, and Excel.
+8. Write a stakeholder summary with verified observations, potential follow-up questions, and limitations.
 
 ## Tools
-- Excel
-- SQL (confirm the dialect used by the queries)
-- Python and Jupyter Notebook
-- pandas and visualization libraries, where used
+Excel, SQL, Python, pandas, Jupyter Notebook, data visualization.
 
-## Project Files
-The repository documentation lists an Excel dashboard, CSV dataset, Python notebook, and SQL script. Check the current file names in the repository if any have changed.
+## Dataset
+The earlier README describes 1,470 records and 35 features. Verify those counts against the current CSV before quoting them.
 
-## Skills Demonstrated
-HR analytics, data cleaning, SQL aggregation, exploratory analysis, KPI calculation, dashboard design, and stakeholder communication.
+## Screenshots
+No screenshot files were found in the repository root. Add dashboard screenshots under `images/` and reference them here.
 
-## Interpretation and Ethics
-Group-level patterns do not prove why an employee left. Avoid using demographic correlations as causal claims or as the sole basis for individual employment decisions. Treat employee data responsibly.
+## Responsible interpretation
+Attrition patterns do not prove why an employee left. Avoid causal claims and protect sensitive employee information.
 
-## Recommended Improvements
-- Add dashboard screenshots and verified findings.
-- Document the dataset source and license.
-- Include exact KPI formulas and SQL dialect.
-- Add reproducible setup instructions.
-- Explain data limitations and avoid unsupported causal language.
+## Next improvements
+Add dataset source, SQL dialect, screenshots, and a small section of verified insights.
