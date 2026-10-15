@@ -1,86 +1,60 @@
 # HR Attrition Analysis
 
-> A workforce analytics project using Python, SQL, and Excel to explore employee attrition and compare workforce indicators across employee groups.
+A workforce analytics project using Python, SQL, and Excel to explore employee attrition and compare workforce indicators across employee groups.
 
-![Python](https://img.shields.io/badge/Python-Analysis-blue)
-![SQL](https://img.shields.io/badge/SQL-Analytics-blue)
-![Excel](https://img.shields.io/badge/Excel-Reporting-green)
+![Python](https://img.shields.io/badge/Python-Analysis-blue) ![SQL](https://img.shields.io/badge/SQL-Analytics-blue) ![Excel](https://img.shields.io/badge/Excel-Reporting-green)
 
-## 📌 Table of Contents
+## Contents
+- [Overview](#overview)
+- [Business Questions](#business-questions)
+- [Dataset](#dataset)
+- [Workflow](#workflow)
+- [Results and Metrics](#results-and-metrics)
+- [Technology Stack](#technology-stack)
+- [Repository Structure](#repository-structure)
+- [Run the Project](#run-the-project)
+- [Limitations and Next Steps](#limitations-and-next-steps)
 
-- [Overview](#-overview)
-- [Problem Statement](#-problem-statement)
-- [Objectives](#-objectives)
-- [Features](#-features)
-- [Dataset](#-dataset)
-- [Tech Stack](#-tech-stack)
-- [Project Workflow](#-project-workflow)
-- [Repository Structure](#-repository-structure)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Results and Insights](#-results-and-insights)
-- [Screenshots](#-screenshots)
-- [Challenges and Solutions](#-challenges-and-solutions)
-- [Limitations](#-limitations)
-- [Future Improvements](#-future-improvements)
-- [What I Learned](#-what-i-learned)
-- [Author](#-author)
-- [License](#-license)
+## Overview
+This project analyzes employee-level HR data to explore attrition patterns across department, job role, overtime, age group, income, satisfaction, and tenure. It combines notebook-based EDA, SQL queries, and an Excel workbook.
 
-## 📖 Overview
+## Business Questions
+- What share of employees are classified as attrited?
+- How do attrition patterns vary across departments and job roles?
+- How are overtime, income, satisfaction, and tenure represented in the dataset?
+- Do Python, SQL, and Excel produce consistent counts and rates?
 
-This project analyzes employee-level HR data to explore attrition patterns and how they vary by department, job role, overtime, age group, income, satisfaction, and tenure. It combines notebook-based EDA, SQL query definitions, and an Excel workbook.
-
-## 🎯 Problem Statement
-
-Organizations need to understand workforce attrition and identify employee groups that may warrant further investigation. Reliable analysis requires a clear attrition definition, valid denominators, and careful interpretation that avoids treating group-level correlations as causes.
-
-## 🎯 Objectives
-
-- Inspect the HR dataset and its quality.
-- Define employee counts and attrition rates consistently.
-- Compare attrition across available demographic and job-related fields.
-- Validate findings between Python, SQL, and Excel.
-
-## ✨ Features
-
-- Exploratory data analysis in Jupyter Notebook.
-- SQL analysis by department, job role, overtime, age group, income, and tenure.
-- Excel workbook for summaries and visualization.
-- Explicit attention to denominator definitions and responsible interpretation.
-
-## 📂 Dataset
-
+## Dataset
 Source file: `HR_Attrition_Analysis.csv`.
 
-| Metric | Value in saved notebook output |
+| Metric | Saved notebook output |
 |---|---:|
 | Rows | 1,470 |
 | Columns | 35 |
 | Target | `Attrition` (Yes/No) |
 
-The dataset includes fields such as department, job role, monthly income, overtime, job satisfaction, total working years, and years at the company. Missing-value and duplicate counts should be reconfirmed by rerunning the notebook. The original source URL and license should be documented.
+The dataset includes department, job role, monthly income, overtime, job satisfaction, total working years, and years at the company. Reconfirm missing-value and duplicate counts by rerunning the notebook. Document the original source and license.
 
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
-|---|---|
-| Python / pandas | Data profiling and EDA |
-| Jupyter Notebook | Reproducible analysis |
-| SQL | Grouped attrition queries |
-| Excel | Summary reporting and visualization |
-
-## 🔄 Project Workflow
-
+## Workflow
 1. Load the CSV and inspect schema, types, missing values, and duplicates.
-2. Define attrition rate as attrition-positive employees divided by the relevant employee count.
+2. Define attrition rate as attrition-positive employees divided by the eligible employee count.
 3. Explore overall and subgroup patterns in Python.
-4. Run SQL queries and inspect their filters and denominators.
-5. Review workbook formulas and visuals.
-6. Reconcile the employee counts and attrition rates across tools.
+4. Run SQL queries and inspect filters and denominators.
+5. Review Excel formulas and visual summaries.
+6. Reconcile counts and rates across tools.
 
-## 🗂️ Repository Structure
+## Results and Metrics
+The saved notebook output reports **1,470 rows × 35 columns**. The repository analysis covers attrition comparisons by department, job role, education field, overtime, age group, income, and working years. Numerical subgroup rates are not stated here because executed query outputs were not independently confirmed in this review.
 
+Before adding a headline attrition rate, rerun the notebook and SQL and record the numerator, denominator, filters, and reporting population.
+
+## Technology Stack
+- Python and pandas for data profiling and EDA
+- Jupyter Notebook for reproducible analysis
+- SQL for grouped attrition queries
+- Excel for summaries and visualization
+
+## Repository Structure
 ```text
 HR-Attrition-Analysis/
 ├── HR_Attrition_Analysis.csv
@@ -90,84 +64,21 @@ HR-Attrition-Analysis/
 └── README.md
 ```
 
-## ⚙️ Installation
-
-### Prerequisites
-
-- Python and Jupyter Notebook
-- SQL engine compatible with the script
-- Microsoft Excel or compatible spreadsheet software
-
-### Setup
-
-```bash
-git clone https://github.com/sahil2003-ai/HR-Attrition-Analysis.git
-cd HR-Attrition-Analysis
-python -m venv .venv
-```
-
-Activate the environment and install pandas and the notebook's imported packages. A root-level dependency file was not identified in the reviewed inventory.
-
-## ▶️ Usage
-
+## Run the Project
 - Run `HR_Attrition_Analysis.ipynb` from top to bottom.
-- Import the CSV into your SQL engine and execute `HR_Attrition_Analysis.sql`.
+- Import the CSV into a compatible SQL engine and execute `HR_Attrition_Analysis.sql`.
 - Open `HR Attrition analysis.xlsx` and validate its tables, formulas, and visuals.
+- Reconcile employee counts and attrition rates across the three tools.
 
-## 📊 Results and Insights
+## Limitations and Next Steps
+- Document the source dataset, data dictionary, date range, and license.
+- Add verified attrition counts and rates by group.
+- Include genuine screenshots from the workbook.
+- Describe group differences as descriptive patterns, not proof of why employees leave.
+- Handle employee-level data carefully and avoid publishing identifying information.
 
-### Verified dataset metric
+## Skills Demonstrated
+Workforce analytics, KPI definitions, Python EDA, SQL aggregation, Excel reporting, data validation, and responsible interpretation.
 
-The saved notebook output reports **1,470 rows × 35 columns**. The target field is `Attrition`.
-
-### Analysis coverage
-
-The SQL queries are designed to compare attrition by department, job role, education field, overtime, age group, income, and working years. Numerical subgroup rates are not reproduced here because the query result outputs were not independently confirmed in this review.
-
-### Evaluation
-
-Rerun the notebook and SQL, record both counts and denominators, and reconcile them with Excel before adding a headline attrition rate. Group differences are descriptive, not proof of why employees leave.
-
-## 🖼️ Screenshots
-
-The Excel workbook is present. Add genuine screenshots of the actual workbook/dashboard after verifying its formulas and data source.
-
-## 🧩 Challenges and Solutions
-
-| Challenge | Approach |
-|---|---|
-| Attrition rates can use inconsistent denominators | Document the numerator and denominator for every rate |
-| Multiple tools may produce different totals | Reconcile filters and employee counts across Python, SQL, and Excel |
-| HR findings can be overinterpreted | Describe group patterns without inferring causation or making individual employment decisions |
-
-## ⚠️ Limitations
-
-- Dataset provenance and license need to be documented.
-- Saved dataset dimensions should be reconfirmed on rerun.
-- Subgroup metrics need executed query outputs.
-- Employee-level data should be handled carefully and not published with identifying information.
-
-## 🚀 Future Improvements
-
-- [ ] Add source and data dictionary.
-- [ ] Export verified attrition counts/rates by group.
-- [ ] Add screenshots with KPI definitions.
-- [ ] Add statistical uncertainty or appropriate significance testing where justified.
-
-## 📚 What I Learned
-
-- Defining workforce KPIs with explicit denominators.
-- Using SQL and Python for subgroup analysis.
-- Reconciling outputs between notebooks and spreadsheets.
-- Communicating sensitive HR findings responsibly.
-
-## 👤 Author
-
-**Sahil Gaikwad**
-
-- GitHub: [sahil2003-ai](https://github.com/sahil2003-ai)
-- LinkedIn: [Sahil Gaikwad](https://www.linkedin.com/in/sahil-gaikwad-a76b7224a/)
-
-## 📄 License
-
-Check for a repository license and document the original dataset source and reuse terms before redistributing the data.
+## Author
+**Sahil Gaikwad** · [GitHub](https://github.com/sahil2003-ai) · [LinkedIn](https://www.linkedin.com/in/sahil-gaikwad-a76b7224a/)
